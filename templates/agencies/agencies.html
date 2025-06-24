@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Agency List{% endblock %}
+
+{% block content %}
+<h2 class="title">📋 Registered Agencies</h2>
+
+<div class="actions">
+    <a href="{{ url_for('agencies.create_agency') }}" class="btn-add">➕ New Agency</a>
+</div>
+
+<table class="agency-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NIT</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Contact</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for agency in agencies %}
+        <tr>
+            <td>{{ agency.id }}</td>
+            <td>{{ agency.nit }}</td>
+            <td>{{ agency.name_agency }}</td>
+            <td>{{ agency.email_agency }}</td>
+            <td>{{ agency.tel_agency }}</td>
+            <td>{{ agency.contact }}</td>
+            <td>
+                <a href="{{ url_for('agencies.edit_agency', id=agency.id) }}" class="btn-action edit">📝</a>
+                <a href="{{ url_for('agencies.delete_agency', id=agency.id) }}" class="btn-action delete" onclick="return confirm('Delete agency?');">🗑️</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

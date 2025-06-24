@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Edit Vendor' if form.num_doc.data else 'New Vendor' }}{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>{{ 'Edit Vendor' if form.num_doc.data else 'Register New Vendor' }}</h2>
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+
+        {% for field in form if field.name != 'submit' %}
+        <div class="form-group">
+            {{ field.label }}
+            {{ field(class="form-control") }}
+            {% if field.errors %}
+            <small class="form-error">{{ field.errors[0] }}</small>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        <div class="form-actions">
+            {{ form.submit(class="btn-submit") }}
+            <a href="{{ url_for('vendors.list_vendors') }}" class="btn-cancel">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

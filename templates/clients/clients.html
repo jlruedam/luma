@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Client List{% endblock %}
+
+{% block content %}
+<h2 class="title">📋 Registered Clients</h2>
+
+<div class="actions">
+  <a href="{{ url_for('clients.create_client') }}" class="btn-add">➕ New Client</a>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Doc Type</th>
+      <th>Document</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Hotel</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for client in clients %}
+    <tr>
+      <td>{{ client.id }}</td>
+      <td>{{ client.tipo_doc }}</td>
+      <td>{{ client.num_doc }}</td>
+      <td>{{ client.name }}</td>
+      <td>{{ client.email }}</td>
+      <td>{{ client.tel or '-' }}</td>
+      <td>{{ client.hotel }}</td>
+      <td>
+        <a href="{{ url_for('clients.edit_client', id=client.id) }}" class="btn-action edit">📝</a>
+        <a href="{{ url_for('clients.delete_client', id=client.id) }}" class="btn-action delete" onclick="return confirm('Delete this client?')">🗑️</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

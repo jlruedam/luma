@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio | Tours{% endblock %}
+
+{% block content %}
+<div style="text-align: right; padding: 1rem;">
+  <a href="{{ url_for('auth.login') }}" class="login-link">Administración</a>
+</div>
+
+<div class="tour-container">
+  {% for tour in tours %}
+    <div class="tour-card">
+      <img src="https://images.pexels.com/photos/813011/pexels-photo-813011.jpeg" alt="{{ tour.name_tour }}">
+      <div class="tour-card-content">
+        <div class="tour-title">{{ tour.name_tour }}</div>
+        <div class="tour-description">{{ tour.description }}</div>
+        <div class="tour-price">${{ '%.2f' % tour.price_sale }}</div>
+        <button>Ver más</button>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

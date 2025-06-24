@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Edit Tour' if form.name_tour.data else 'New Tour' }}{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>{{ 'Edit Tour' if form.name_tour.data else 'Create New Tour' }}</h2>
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+
+        {% for field in form if field.name != 'submit' %}
+        <div class="form-group">
+            <label>{{ field.label }}</label>
+            {{ field(class="form-control", placeholder=field.label.text) }}
+            {% if field.errors %}
+            <small class="form-error">{{ field.errors[0] }}</small>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        <div class="form-actions">
+            {{ form.submit(class="btn-submit") }}
+            <a href="{{ url_for('tours.list_tours') }}" class="btn-cancel">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

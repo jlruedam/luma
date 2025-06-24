@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Sales List{% endblock %}
+
+{% block content %}
+<h2>📋 List of Sales</h2>
+
+<a href="{{ url_for('sales.create_sale') }}" class="btn-add">➕ New Sale</a>
+
+<table class="table-sales">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Tour</th>
+        <th>Client</th>
+        <th>Vendor 1</th>
+        <th>Vendor 2</th>
+        <th>Quantity</th>
+        <th>Payment</th>
+        <th>Observations</th>
+        <th>Date</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for sale in sales %}
+        <tr>
+            <td>{{ sale.id }}</td>
+            <td>{{ sale.tour.name_tour }}</td>
+            <td>{{ sale.client.name }}</td>
+            <td>{{ sale.vendor1.name }}</td>
+            <td>{{ sale.vendor2.name }}</td>
+            <td>{{ sale.quantity }}</td>
+            <td>{{ sale.options_payment }}</td>
+            <td>{{ sale.observations }}</td>
+            <td>{{ sale.created_at.strftime('%Y-%m-%d') }}</td>
+            <td>
+                <a href="{{ url_for('sales.edit_sale', id=sale.id) }}">📝 Edit</a> |
+                <a href="{{ url_for('sales.delete_sale', id=sale.id) }}" onclick="return confirm('Are you sure you want to delete this sale?');">🗑️ Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

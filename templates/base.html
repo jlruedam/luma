@@ -1,0 +1,36 @@
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Tours{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo3.png') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <header>
+    <a href="/"><img src="{{ url_for('static', filename='img/logo2.png') }}"></a>
+    <div>
+      <h1>Luma Tours</h1>
+      <p>...Descubriendo los destinos más fascinantes de Colombia...</p>
+    </div>
+    <a href="/"><img src="{{ url_for('static', filename='img/logo2.png') }}"></a>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="main-footer">
+    <div class="footer-content">
+        <div class="contact-info">
+            <p>📞 Contáctanos: +57 300 123 4567</p>
+            <p>📧 Email: info@toursluma.com</p>
+        </div>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank">🌐 Facebook</a> |
+            <a href="https://instagram.com" target="_blank">📸 Instagram</a> |
+            <a href="https://wa.me/573001234567" target="_blank">💬 WhatsApp</a>
+        </div>
+        <p class="footer-copy">© 2025 Luma Tours. Todos los derechos reservados.</p>
+    </div>
+</footer>
+</body>
+</html>

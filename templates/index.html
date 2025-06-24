@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Menú | Gestión{% endblock %}
+
+{% block content %}
+<img src="https://imgur.com/Kl10WPk" alt="" width="100px" height="100px">
+
+
+<div class="admin-menu">
+    <h1>📋 Módulo de Administración de Ventas</h1>
+    <div><a href="{{ url_for('sales.list_sales') }}">Gestión Ventas</a></div>
+    <div><a href="{{ url_for('clients.list_clients') }}">Gestión Clientes</a></div>
+    <div><a href="{{ url_for('tours.list_tours') }}">Gestión Tours</a></div>
+    <div><a href="{{ url_for('vendors.list_vendors') }}">Gestión Vendedores</a></div>
+    <div><a href="{{ url_for('agencies.list_agencies') }}">Gestión Agencias</a></div>
+    <div><a href="">Gestión Usuarios</a></div>
+    <div><a href="{{ url_for('payments.list_payments') }}">Gestión Pagos</a></div>
+    <div><a href="{{ url_for('auth.logout') }}">Salir</a></div>
+</div>
+{% endblock %}

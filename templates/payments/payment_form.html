@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Edit Payment' if form.id_sale.data else 'New Payment' }}{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>{{ 'Edit Payment' if form.id_sale.data else 'Register New Payment' }}</h2>
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+
+        <div class="form-group">
+            {{ form.id_sale.label }}
+            {{ form.id_sale(class="form-control") }}
+            {% if form.id_sale.errors %}
+            <small class="form-error">{{ form.id_sale.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.value.label }}
+            {{ form.value(class="form-control") }}
+            {% if form.value.errors %}
+            <small class="form-error">{{ form.value.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-actions">
+            {{ form.submit(class="btn-submit") }}
+            <a href="{{ url_for('payments.list_payments') }}" class="btn-cancel">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

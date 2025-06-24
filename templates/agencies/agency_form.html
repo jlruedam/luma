@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Edit Agency' if form.nit.data else 'New Agency' }}{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>{{ 'Edit Agency' if form.nit.data else 'Register New Agency' }}</h2>
+
+    <form method="POST" class="agency-form">
+        {{ form.hidden_tag() }}
+
+        {% for field in form %}
+            {% if field.name != 'submit' %}
+            <div class="form-group">
+                <label>{{ field.label }}</label>
+                {{ field(class="form-control", placeholder=field.label.text) }}
+                {% if field.errors %}
+                    <small class="form-error">{{ field.errors[0] }}</small>
+                {% endif %}
+            </div>
+            {% endif %}
+        {% endfor %}
+
+        <div class="form-actions">
+            {{ form.submit(class="btn-submit") }}
+            <a href="{{ url_for('agencies.list_agencies') }}" class="btn-cancel">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

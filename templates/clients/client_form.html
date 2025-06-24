@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Edit Client' if form.num_doc.data else 'New Client' }}{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>{{ 'Edit Client' if form.num_doc.data else 'Register New Client' }}</h2>
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+
+        <div class="form-group">
+            {{ form.tipo_doc.label }}
+            {{ form.tipo_doc(class="form-control") }}
+            {% if form.tipo_doc.errors %}
+            <small class="form-error">{{ form.tipo_doc.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.num_doc.label }}
+            {{ form.num_doc(class="form-control") }}
+            {% if form.num_doc.errors %}
+            <small class="form-error">{{ form.num_doc.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.name.label }}
+            {{ form.name(class="form-control") }}
+            {% if form.name.errors %}
+            <small class="form-error">{{ form.name.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.email.label }}
+            {{ form.email(class="form-control") }}
+            {% if form.email.errors %}
+            <small class="form-error">{{ form.email.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.tel.label }}
+            {{ form.tel(class="form-control") }}
+            {% if form.tel.errors %}
+            <small class="form-error">{{ form.tel.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.hotel.label }}
+            {{ form.hotel(class="form-control") }}
+            {% if form.hotel.errors %}
+            <small class="form-error">{{ form.hotel.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-actions">
+            {{ form.submit(class="btn-submit") }}
+            <a href="{{ url_for('clients.list_clients') }}" class="btn-cancel">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

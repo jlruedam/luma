@@ -1,0 +1,748 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: linear-gradient(45deg, #0088cc, #00cc99);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header h1 {
+  letter-spacing: 20px;
+  font-size: 50px;
+}
+
+header img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+
+/*TOURS*/
+
+.title {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.actions {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.btn-add {
+  padding: 0.6rem 1rem;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.table th, .table td {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.table img {
+  max-height: 60px;
+}
+
+.btn-action {
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-right: 0.4rem;
+}
+
+.btn-action.edit {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-action.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.tour-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.tour-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tour-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.tour-card-content {
+  padding: 1rem;
+}
+
+.tour-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.tour-description {
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+}
+
+.tour-price {
+  font-weight: bold;
+  color: #00aa77;
+  margin-bottom: 1rem;
+}
+
+.tour-card button {
+  padding: 0.6rem 1.2rem;
+  background-color: #0088cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tour-card button:hover {
+  background-color: #006699;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-error {
+    color: #d9534f;
+    font-size: 0.85rem;
+}
+
+.btn-submit {
+    padding: 0.6rem 1.4rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-cancel {
+    padding: 0.6rem 1.4rem;
+    background: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+.login-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #0088cc;
+  background: #e6f5ff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+}
+
+.login-link:hover {
+  background: #d0ecff;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.login-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.form-button {
+  padding: 0.6rem 1.2rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background: #0056b3;
+}
+
+.register-container {
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #f0f8ff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.register-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.form-button {
+  padding: 0.6rem 1.2rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background: #218838;
+}
+
+/*ADMIN*/
+
+.admin-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+.admin-menu {
+  text-align: center;
+}
+
+.admin-menu div {
+  background: #e0f7fa;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.admin-menu a {
+  text-decoration: none;
+  color: #00796b;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.admin-menu a:hover {
+  color: #004d40;
+}
+
+/*Footer*/
+.main-footer {
+  background-color: #333;
+  color: #f1f1f1;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 0.95rem;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-content .contact-info,
+.footer-content .social-media {
+  margin-bottom: 1rem;
+}
+
+.footer-content a {
+  color: #f1f1f1;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/*Tabla Listar clientes*/
+
+.table-clientes {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+.table-clientes caption {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+.table-clientes th,
+.table-clientes td {
+  border: 1px solid #ccc;
+  padding: 0.6rem;
+  text-align: left;
+}
+
+.table-clientes th {
+  background-color: #f0f0f0;
+}
+
+.table-clientes tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table-clientes a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.table-clientes a:hover {
+  text-decoration: underline;
+}
+
+/*Listar ventas*/
+.table-sales {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.table-sales th, .table-sales td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+}
+
+.table-sales th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.btn-add {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.btn-add:hover {
+  background: #218838;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-error {
+    color: #d9534f;
+    font-size: 0.85rem;
+}
+
+.btn-submit {
+    padding: 0.6rem 1.4rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-cancel {
+    padding: 0.6rem 1.4rem;
+    background: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+
+
+/*Sale form*/
+.form-sale {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fdfdfd;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-button {
+  background: #28a745;
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background: #218838;
+}
+
+.form-cancel {
+  margin-left: 1rem;
+  color: #555;
+  text-decoration: none;
+}
+
+.form-cancel:hover {
+  text-decoration: underline;
+}
+
+.form-errors {
+  background: #ffe6e6;
+  border: 1px solid #ff9999;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  color: #b30000;
+}
+
+/*Agencies*/
+.title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.actions {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.btn-add {
+    padding: 0.6rem 1rem;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-add:hover {
+    background-color: #218838;
+}
+
+.agency-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.agency-table th,
+.agency-table td {
+    padding: 0.75rem;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.agency-table thead {
+    background-color: #f5f5f5;
+}
+
+.btn-action {
+    text-decoration: none;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    margin-right: 0.4rem;
+}
+
+.btn-action.edit {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-action.edit:hover {
+    background-color: #0056b3;
+}
+
+.btn-action.delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-action.delete:hover {
+    background-color: #a71d2a;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.agency-form .form-group {
+    margin-bottom: 1.2rem;
+}
+
+.agency-form .form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-error {
+    color: #d9534f;
+    font-size: 0.85rem;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn-submit {
+    padding: 0.6rem 1.4rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background: #0056b3;
+}
+
+.btn-cancel {
+    padding: 0.6rem 1.4rem;
+    background: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-cancel:hover {
+    background: #5a6268;
+}
+
+
+/*Vendors*/
+/* Title / Headers */
+.title {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-size: 2rem;
+  color: #343a40;
+}
+
+/* Action buttons (Add, Submit, Cancel) */
+.actions, .form-actions {
+  text-align: right;
+  margin-bottom: 1.5rem;
+}
+
+.btn-add,
+.btn-submit,
+.btn-cancel {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+
+.btn-add {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-submit {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-cancel {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Table styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+.table th, .table td {
+  padding: 0.75rem;
+  border: 1px solid #dee2e6;
+  text-align: left;
+}
+
+.table th {
+  background-color: #e9ecef;
+}
+
+/* Buttons inside table */
+.btn-action {
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  margin-right: 0.4rem;
+  color: white;
+}
+
+.btn-action.edit {
+  background-color: #17a2b8;
+}
+
+.btn-action.delete {
+  background-color: #dc3545;
+}
+
+/* Form styles */
+.form-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-error {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+

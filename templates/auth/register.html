@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Registro
+{% endblock title %}
+
+{% block content %}
+<div class="register-container">
+    <h2>Crear cuenta</h2>
+    
+    <form method="POST" class="register-form">
+        {{ form.hidden_tag() }}
+
+        <div class="form-group">
+            {{ form.username.label(class="form-label") }}
+            {{ form.username(class="form-input") }}
+        </div>
+
+        <div class="form-group">
+            {{ form.password.label(class="form-label") }}
+            {{ form.password(class="form-input") }}
+        </div>
+
+        <div class="form-group">
+            {{ form.confirm.label(class="form-label") }}
+            {{ form.confirm(class="form-input") }}
+        </div>
+
+        <div class="form-group">
+            {{ form.submit(class="form-button") }}
+        </div>
+    </form>
+</div>
+{% endblock content %}

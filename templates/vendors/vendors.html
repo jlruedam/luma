@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Vendors{% endblock %}
+
+{% block content %}
+<h2 class="title">👥 List of Vendors</h2>
+
+<div class="actions">
+  <a href="{{ url_for('vendors.create_vendor') }}" class="btn-add">➕ New Vendor</a>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Type</th>
+      <th>Document</th>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for vendor in vendors %}
+    <tr>
+      <td>{{ vendor.id }}</td>
+      <td>{{ vendor.type_doc }}</td>
+      <td>{{ vendor.num_doc }}</td>
+      <td>{{ vendor.name }}</td>
+      <td>{{ vendor.tel }}</td>
+      <td>{{ vendor.email }}</td>
+      <td>
+        <a href="{{ url_for('vendors.edit_vendor', id=vendor.id) }}" class="btn-action edit">📝</a>
+        <a href="{{ url_for('vendors.delete_vendor', id=vendor.id) }}" class="btn-action delete" onclick="return confirm('Delete this vendor?')">🗑️</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
