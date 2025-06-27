@@ -6,11 +6,10 @@ from dotenv import dotenv_values
 config = dotenv_values(".env")
 
 print(config)
-
-SERVER =str(config['SERVER'])
-DATABASE = str(config['DATABASE'])
-USER = str(config['USER'])
-PASSWORD = str(config['PASSWORD'])
+HOST =config['HOST']
+DATABASE = config['DATABASE']
+USER = config['USER']
+PASSWORD = config['PASSWORD']
 PORT = config.get('PORT', '5432')
 
 class Config:
@@ -19,7 +18,7 @@ class Config:
     #     '?driver=ODBC+Driver+17+for+SQL+Server'
     # )
     SQLALCHEMY_DATABASE_URI = (
-        f'postgresql://{USER}:{PASSWORD}@{SERVER}:{PORT}/{DATABASE}'
+        f'postgresql://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}'
     )
     SQLALCHEMY_TRACK_MODIFICATIONS = False 
     SECRET_KEY = "this-is-not-secret" 
