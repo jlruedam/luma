@@ -1,16 +1,22 @@
-# import os
+import os
 # DB_FILE_PATH = os.path.join(os.path.dirname(__file__), "luma.sqlite")
 
-from dotenv import dotenv_values
+# from dotenv import dotenv_values
 
-config = dotenv_values(".env")
+# config = dotenv_values(".env")
 
-print(config)
-HOST =config['HOST']
-DATABASE = config['DATABASE']
-USER = config['USER']
-PASSWORD = config['PASSWORD']
-PORT = config.get('PORT', '5432')
+USER = os.getenv('USER')
+PASSWORD = os.getenv('PASSWORD')
+HOST = os.getenv('HOST')
+PORT = os.getenv('PORT', '5432')
+DATABASE = os.getenv('DATABASE')
+
+# print(config)
+# HOST =config['HOST']
+# DATABASE = config['DATABASE']
+# USER = config['USER']
+# PASSWORD = config['PASSWORD']
+# PORT = config.get('PORT', '5432')
 
 class Config:
     # SQLALCHEMY_DATABASE_URI = (
