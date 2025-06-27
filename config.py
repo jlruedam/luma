@@ -11,11 +11,15 @@ SERVER =str(config['SERVER'])
 DATABASE = str(config['DATABASE'])
 USER = str(config['USER'])
 PASSWORD = str(config['PASSWORD'])
+PORT = config.get('PORT', '5432')
 
 class Config:
+    # SQLALCHEMY_DATABASE_URI = (
+    #     f'mssql+pyodbc://{USER}:{PASSWORD}@{SERVER}/{DATABASE}'
+    #     '?driver=ODBC+Driver+17+for+SQL+Server'
+    # )
     SQLALCHEMY_DATABASE_URI = (
-        f'mssql+pyodbc://{USER}:{PASSWORD}@{SERVER}/{DATABASE}'
-        '?driver=ODBC+Driver+17+for+SQL+Server'
+        f'postgresql://{USER}:{PASSWORD}@{SERVER}:{PORT}/{DATABASE}'
     )
     SQLALCHEMY_TRACK_MODIFICATIONS = False 
     SECRET_KEY = "this-is-not-secret" 

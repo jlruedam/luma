@@ -2,7 +2,7 @@
 {% block title %}{{ 'Edit Sale' if form.tour_id.data else 'New Sale' }}{% endblock %}
 
 {% block content %}
-<h2>{{ 'Edit Sale' if form.tour_id.data else 'Register New Sale' }}</h2>
+<h2 class = "title">{{ 'Edit Sale' if form.tour_id.data else 'Register New Sale' }}</h2>
 
 <form method="POST" class="form-sale">
     {{ form.hidden_tag() }}

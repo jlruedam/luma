@@ -106,7 +106,7 @@ class Sale(db.Model):
     vendor2_id = db.Column(db.Integer, db.ForeignKey('vendors.id'), nullable=False)
     quantity = db.Column(db.Integer, nullable=False)
     options_payment = db.Column(db.String(100), nullable=False)
-    observations = db.Column(db.String(200), nullable=False, default='')
+    observations = db.Column(db.String(250), nullable=False, default='')
     created_at = db.Column(db.DateTime, default=datetime.now, nullable=False)
     updated_at = db.Column(db.DateTime, default=datetime.now, onupdate=datetime.now)
 

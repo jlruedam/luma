@@ -49,7 +49,7 @@ app.register_blueprint(payments_bp)
 @app.route("/")
 def landpage():
     tours = Tour.query.all()
-    return render_template("landpage.html", tours = tours)
+    return render_template("landingpage.html", tours = tours)
 
 
 @app.route("/home")

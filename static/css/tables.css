@@ -1,0 +1,27 @@
+/* ✅ Tables - tables.css */
+.table,
+.agency-table,
+.table-clientes,
+.table-sales {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.table th, .table td,
+.agency-table th, .agency-table td,
+.table-clientes th, .table-clientes td,
+.table-sales th, .table-sales td {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.table th,
+.agency-table thead,
+.table-clientes th,
+.table-sales th {
+  background-color: #f2f2f2;
+}

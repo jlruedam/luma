@@ -27,7 +27,7 @@
     <tr>
       <td>{{ tour.id }}</td>
       <td>
-        <img src="{{ url_for('static', filename=tour.image_path) }}" alt="{{ tour.name_tour }}" style="width: 80px; border-radius: 6px;">
+        <img src="{{tour.image_path}}" alt="{{ tour.name_tour }}" style="width: 80px; border-radius: 6px;">
       </td>
       <td>{{ tour.name_tour }}</td>
       <td>{{ tour.description[:50] }}...</td>
