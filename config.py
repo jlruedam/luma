@@ -24,7 +24,7 @@ class Config:
     #     '?driver=ODBC+Driver+17+for+SQL+Server'
     # )
     SQLALCHEMY_DATABASE_URI = (
-        f'postgresql://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}'
+        f'postgresql://{USER}:{PASSWORD}@{HOST}:{DB_PORT}/{DATABASE}'
     )
     SQLALCHEMY_TRACK_MODIFICATIONS = False 
     SECRET_KEY = "this-is-not-secret" 
