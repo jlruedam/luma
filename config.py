@@ -8,7 +8,6 @@ import os
 USER = os.getenv('USER')
 PASSWORD = os.getenv('PASSWORD')
 HOST = os.getenv('HOST')
-DB_PORT = os.getenv('DB_PORT', '5432')
 DATABASE = os.getenv('DATABASE')
 
 # print(config)
