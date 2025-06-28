@@ -9,10 +9,24 @@ body {
   text-align: center;
   margin: 2rem 0 1rem;
   font-size: 2rem;
-  color: #343a40;
+  color: #656565;
 }
 
 .actions {
   text-align: right;
   margin-bottom: 1.5rem;
+}
+
+
+.btn-icon {
+  font-size: 1rem;
+  margin-left: 0.4rem;
+  color: #007bff;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.btn-icon:hover {
+  color: #0056b3;
+  text-decoration: underline;
 }

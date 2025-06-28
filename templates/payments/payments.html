@@ -3,10 +3,11 @@
 
 {% block content %}
 <h2 class="title">💳 Payments List</h2>
+<!-- Botón para volver al menú -->
+<a href="{{ url_for('home') }}" class="btn-cancel">← Back to Menu</a>
 
-<div class="actions">
-  <a href="{{ url_for('payments.create_payment') }}" class="btn-add">➕ New Payment</a>
-</div>
+<a href="{{ url_for('payments.create_payment') }}" class="btn-add">➕ New Payment</a>
+
 
 <table class="table">
   <thead>

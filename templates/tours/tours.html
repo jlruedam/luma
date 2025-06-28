@@ -5,9 +5,12 @@
 {% block content %}
 <h2 class="title">🌴 Registered Tours</h2>
 
-<div class="actions">
-  <a href="{{ url_for('tours.create_tour') }}" class="btn-add">➕ New Tour</a>
-</div>
+<!-- Botón para volver al menú -->
+<a href="{{ url_for('home') }}" class="btn-cancel">← Back to Menu</a>
+
+
+<a href="{{ url_for('tours.create_tour') }}" class="btn-add">➕ New Tour</a>
+
 
 <table class="table">
   <thead>
@@ -27,7 +30,7 @@
     <tr>
       <td>{{ tour.id }}</td>
       <td>
-        <img src="{{tour.image_path}}" alt="{{ tour.name_tour }}" style="width: 80px; border-radius: 6px;">
+        <img src="{{ tour.image_path }}" alt="{{ tour.name_tour }}" style="width: 80px; border-radius: 6px;">
       </td>
       <td>{{ tour.name_tour }}</td>
       <td>{{ tour.description[:50] }}...</td>

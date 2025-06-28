@@ -2,7 +2,7 @@
 {% block title %}{{ 'Edit Sale' if form.tour_id.data else 'New Sale' }}{% endblock %}
 
 {% block content %}
-<h2 class = "title">{{ 'Edit Sale' if form.tour_id.data else 'Register New Sale' }}</h2>
+<h2 class="title">{{ 'Edit Sale' if form.tour_id.data else 'Register New Sale' }}</h2>
 
 <form method="POST" class="form-sale">
     {{ form.hidden_tag() }}
@@ -22,22 +22,34 @@
     {% endwith %}
 
     <div class="form-group">
-        {{ form.tour_id.label }}<br>
+        <label>
+            {{ form.tour_id.label }}
+            <a href="{{ url_for('tours.create_tour') }}" class="btn-icon-small" title="Add new tour">➕</a>
+        </label>
         {{ form.tour_id(class="form-input") }}
     </div>
 
     <div class="form-group">
-        {{ form.client_id.label }}<br>
+        <label>
+            {{ form.client_id.label }}
+            <a href="{{ url_for('clients.create_client') }}" class="btn-icon-small" title="Add new client">➕</a>
+        </label>
         {{ form.client_id(class="form-input") }}
     </div>
 
     <div class="form-group">
-        {{ form.vendor1_id.label }}<br>
+        <label>
+            {{ form.vendor1_id.label }}
+            <a href="{{ url_for('vendors.create_vendor') }}" class="btn-icon-small" title="Add vendor 1">➕</a>
+        </label>
         {{ form.vendor1_id(class="form-input") }}
     </div>
 
     <div class="form-group">
-        {{ form.vendor2_id.label }}<br>
+        <label>
+            {{ form.vendor2_id.label }}
+            <a href="{{ url_for('vendors.create_vendor') }}" class="btn-icon-small" title="Add vendor 2">➕</a>
+        </label>
         {{ form.vendor2_id(class="form-input") }}
     </div>
 

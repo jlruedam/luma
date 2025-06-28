@@ -3,15 +3,41 @@
 {% block title %}Menú | Gestión{% endblock %}
 
 {% block content %}
-<div class="admin-menu">
-    <h1>📋 Módulo de Administración de Ventas</h1>
-    <div><a href="{{ url_for('sales.list_sales') }}">Gestión Ventas</a></div>
-    <div><a href="{{ url_for('clients.list_clients') }}">Gestión Clientes</a></div>
-    <div><a href="{{ url_for('tours.list_tours') }}">Gestión Tours</a></div>
-    <div><a href="{{ url_for('vendors.list_vendors') }}">Gestión Vendedores</a></div>
-    <div><a href="{{ url_for('agencies.list_agencies') }}">Gestión Agencias</a></div>
-    <div><a href="">Gestión Usuarios</a></div>
-    <div><a href="{{ url_for('payments.list_payments') }}">Gestión Pagos</a></div>
-    <div><a href="{{ url_for('auth.logout') }}">Salir</a></div>
+<div class="admin-dashboard">
+    <h1 class="title">📋 Panel de Administración</h1>
+    <div class="dashboard-grid">
+        <a href="{{ url_for('sales.list_sales') }}" class="dashboard-card">
+            <span>💰</span>
+            <h3>Ventas</h3>
+        </a>
+        <a href="{{ url_for('clients.list_clients') }}" class="dashboard-card">
+            <span>🧍</span>
+            <h3>Clientes</h3>
+        </a>
+        <a href="{{ url_for('tours.list_tours') }}" class="dashboard-card">
+            <span>🌴</span>
+            <h3>Tours</h3>
+        </a>
+        <a href="{{ url_for('vendors.list_vendors') }}" class="dashboard-card">
+            <span>🧑‍💼</span>
+            <h3>Vendedores</h3>
+        </a>
+        <a href="{{ url_for('agencies.list_agencies') }}" class="dashboard-card">
+            <span>🏢</span>
+            <h3>Agencias</h3>
+        </a>
+        <a href="{{ url_for('auth.register') }}" class="dashboard-card">
+            <span>👥</span>
+            <h3>Usuarios</h3>
+        </a>
+        <a href="{{ url_for('payments.list_payments') }}" class="dashboard-card">
+            <span>💳</span>
+            <h3>Pagos</h3>
+        </a>
+        <a href="{{ url_for('auth.logout') }}" class="dashboard-card logout">
+            <span>🚪</span>
+            <h3>Salir</h3>
+        </a>
+    </div>
 </div>
 {% endblock %}

@@ -1,0 +1,19 @@
+/*Listar ventas*/
+.table-sales {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.table-sales th, .table-sales td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+}
+
+.table-sales th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+
+

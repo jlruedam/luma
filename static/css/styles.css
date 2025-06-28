@@ -29,10 +29,11 @@ header img{
 
 /*TOURS*/
 
-.title {
+/* .title {
   text-align: center;
   margin: 1.5rem 0;
-}
+  color: #00cc99;
+} */
 
 .actions {
   text-align: right;
@@ -46,6 +47,21 @@ header img{
   text-decoration: none;
   border-radius: 5px;
 }
+
+.btn-cancel {
+  padding: 0.6rem 1.2rem;
+  background: #6c757d;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+.btn-cancel:hover {
+  background: #5a6268;
+}
+
 
 .table {
   width: 100%;
@@ -270,38 +286,6 @@ header img{
   background: #218838;
 }
 
-/*ADMIN*/
-
-.admin-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 400px;
-  margin: 2rem auto;
-}
-
-.admin-menu {
-  text-align: center;
-}
-
-.admin-menu div {
-  background: #e0f7fa;
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.admin-menu a {
-  text-decoration: none;
-  color: #00796b;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-.admin-menu a:hover {
-  color: #004d40;
-}
 
 /*Footer*/
 .main-footer {
@@ -377,22 +361,7 @@ header img{
   text-decoration: underline;
 }
 
-/*Listar ventas*/
-.table-sales {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-}
 
-.table-sales th, .table-sales td {
-  border: 1px solid #ddd;
-  padding: 0.5rem;
-}
-
-.table-sales th {
-  background-color: #f2f2f2;
-  text-align: left;
-}
 
 .btn-add {
   display: inline-block;
@@ -507,10 +476,6 @@ header img{
 }
 
 /*Agencies*/
-.title {
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
 
 .actions {
     text-align: right;
@@ -641,12 +606,12 @@ header img{
 
 /*Vendors*/
 /* Title / Headers */
-.title {
+/* .title {
   text-align: center;
   margin: 2rem 0 1rem;
   font-size: 2rem;
   color: #343a40;
-}
+} */
 
 /* Action buttons (Add, Submit, Cancel) */
 .actions, .form-actions {

@@ -1,7 +1,5 @@
 import os
-# DB_FILE_PATH = os.path.join(os.path.dirname(__file__), "luma.sqlite")
-
-# from dotenv import dotenv_values
+from dotenv import dotenv_values
 
 # config = dotenv_values(".env")
 
@@ -15,11 +13,11 @@ DATABASE = os.getenv('DATABASE')
 # DATABASE = config['DATABASE']
 # USER = config['USER']
 # PASSWORD = config['PASSWORD']
-# PORT = config.get('PORT', '5432')
+
 
 class Config:
     # SQLALCHEMY_DATABASE_URI = (
-    #     f'mssql+pyodbc://{USER}:{PASSWORD}@{SERVER}/{DATABASE}'
+    #     f'mssql+pyodbc://{USER}:{PASSWORD}@{HOST}/{DATABASE}'
     #     '?driver=ODBC+Driver+17+for+SQL+Server'
     # )
     SQLALCHEMY_DATABASE_URI = (

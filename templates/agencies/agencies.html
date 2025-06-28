@@ -4,9 +4,10 @@
 {% block content %}
 <h2 class="title">📋 Registered Agencies</h2>
 
-<div class="actions">
-    <a href="{{ url_for('agencies.create_agency') }}" class="btn-add">➕ New Agency</a>
-</div>
+<!-- Botón para volver al menú -->
+<a href="{{ url_for('home') }}" class="btn-cancel">← Back to Menu</a>
+<a href="{{ url_for('agencies.create_agency') }}" class="btn-add">➕ New Agency</a>
+
 
 <table class="agency-table">
     <thead>
